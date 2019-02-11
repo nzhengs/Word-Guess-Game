@@ -72,11 +72,11 @@ document.onkeyup = function(event) {
     if (incorrectAttempt === keyPress) {
     }
     incorrectAttempt.push(keyPress);
-    $("#falseAttempts").html("your's guesses"+ "<br>"+ incorrectAttempt);
+    $("#falseAttempts").html(incorrectAttempt.join(", "));
   }
 
   remainingAttempts--;
-  $("#remainingAttempt").html("Remaining Attempts: " + "<br>" + remainingAttempts);
+  $("#remainingAttempt").html(remainingAttempts);
 
   if (remainingAttempts === 0) {
     setTimeout(function() {// timeout to prevent browser update delay issue

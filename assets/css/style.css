@@ -1,0 +1,36 @@
+body {
+  background-image: url("../images/white-waves.png");
+  text-align: center;
+}
+h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  color: rgb(48, 18, 78);
+  font-size: 60px;
+}
+h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  color: rgb(47, 23, 70);
+  font-size: 22px;
+}
+.picture {
+  width: 200px;
+  height: auto;
+}
+#dashes{
+    font-size: 40px;
+    border: 2px solid cornflowerblue;
+    height: 150px;
+    line-height: 130px;
+    margin-bottom: 10px;
+}
+.message {
+    border: 2px solid cornflowerblue;
+    height: 70px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+

@@ -3,25 +3,58 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"
     ></script>
 
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
     <title>Word Guess Game</title>
   </head>
   <body>
-    <h1>HangMan</h1>
+    <div>
+      <img class="picture" src="assets/images/hangman.png" />
+    </div>
     <h2>Press any key to get started</h2>
-    <div id="dashes"></div>
-    <div id ="falseAttempts"></div>
-    <div id="remainingAttempt"></div>
-    <img id="displayImage">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+          <div id="dashes"></div>
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="message" >
+                <p>Your wrong guesses are : </p>
+                <p id="falseAttempts"></p>
+              </div>
+            </div>
+          </div>
+          <!-- <br /> -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="message">
+                <p>Number of attempts left :</p>
+                <p id="remainingAttempt"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+
+    <img id="displayImage" />
+
     <script src="assets/javascript/game.js"></script>
   </body>
 </html>
