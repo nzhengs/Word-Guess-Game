@@ -47,6 +47,11 @@ var allKeyPressed = [];
 document.onkeyup = function(event) {
   var keyPress = event.key;
   keyPress = keyPress.toLowerCase();
+  var isAlpha = event.which > 64 && event.which < 91 || event.which > 96 && event.which < 123;
+  if (!isAlpha){
+      return;
+  }
+
   if (allKeyPressed.indexOf(keyPress) >= 0) {
     return;
   }
