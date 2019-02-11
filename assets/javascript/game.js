@@ -1,5 +1,9 @@
 var randomWords = ["apicort", "brinjal", "cat", "mango", "banana"];
 
+var fruits = {
+    mango: "https://www.titosvodka.com/uploads/recipes/_auto1000/ingredient-mango.jpg",
+}
+
 function getRandomInt(max) {
   var random = Math.random();
   var randomNumber = random * max;
@@ -55,20 +59,31 @@ document.onkeyup = function(event) {
       correctAttempt[i] = keyPress;
     });
     displayWithDashes(correctAttempt);
-    console.log(correctAttempt);
+   
     if (guessedWord === correctAttempt.join("")) {
-      console.log("You Won");
+        $("#displayImage").attr("src", fruits[guessedWord]);
+        setTimeout(function() {// timeout to prevent browser update delay issue
+            alert("Congratulation!!!You Won!!");
+            location.reload();
+        }, 100);
+
     }
   } else {
     if (incorrectAttempt === keyPress) {
     }
     incorrectAttempt.push(keyPress);
-    $("#falseAttempts").text(incorrectAttempt);
+    $("#falseAttempts").html("your's guesses"+ "<br>"+ incorrectAttempt);
   }
 
   remainingAttempts--;
+  $("#remainingAttempt").html("Remaining Attempts: " + "<br>" + remainingAttempts);
 
   if (remainingAttempts === 0) {
-    console.log("Try Again");
+    setTimeout(function() {// timeout to prevent browser update delay issue
+        alert("Sorry!!, Please Try Again!!!!!");
+        location.reload();
+    });
+    
+    
   }
 };
