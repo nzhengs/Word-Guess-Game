@@ -1,6 +1,6 @@
-var randomWords = ["apicort", "brinjal", "cat", "mango", "banana"];
+var randomWords = ["apricot", "brinjal", "cat", "mango", "banana","leopard","everest","plymouth","paynesville","minnetonka","zumbrota","rhythm","playwright","laison"];
 
-var fruits = {
+var randomObject = {
     mango: "https://www.titosvodka.com/uploads/recipes/_auto1000/ingredient-mango.jpg",
 }
 
@@ -66,7 +66,7 @@ document.onkeyup = function(event) {
     displayWithDashes(correctAttempt);
    
     if (guessedWord === correctAttempt.join("")) {
-        $("#displayImage").attr("src", fruits[guessedWord]);
+        $("#displayImage").attr("src", randomObject[guessedWord]);
         setTimeout(function() {// timeout to prevent browser update delay issue
             alert("Congratulation!!!You Won!!");
             location.reload();
