@@ -20,6 +20,7 @@ h2 {
   width: 200px;
   height: auto;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 #dashes{
     font-size: 40px;
@@ -34,5 +35,13 @@ h2 {
     margin-bottom: 10px;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
+}
+#falseAttempts{
+  text-transform: uppercase;
+}
+.navbar-brand{
+      font-family: cursive;
+      font-weight: bolder;
+      font-size: 30px;
 }
 
